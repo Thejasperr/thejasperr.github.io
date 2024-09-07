@@ -238,3 +238,109 @@ hr{
 }
   
   
+
+
+
+
+
+
+
+
+
+
+
+.sobre .row{
+    margin: 0;
+    height: 100vh;
+}
+
+.sobre .imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre .sobre-mim{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 100px;
+}
+
+.sobre img{
+    width: 320px;
+    border: 20px white solid;
+    filter: grayscale(1);
+}
+
+.sobre img:hover{
+    resize: 2;
+    width: 320px;
+    border: 10px white solid;
+    filter: grayscale(0);
+    transition: 0.5s ease;
+}
+
+.modal-content{
+    background-color: rgb(0, 0, 0);
+}
+
+.modal-header{
+    border: none;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+    width: auto;
+    justify-content: flex-start;
+}
+
+.modal-header h5{
+    text-align: center;
+}
+.modal-backdrop.show {
+    background-color: #05d3f8;
+}
+
+
+.sobre .carousel-indicators {
+    bottom: 0;
+    position: relative;
+}
+
+.sobre .carousel-indicators li{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.sobre button.close {
+    color: white;
+    padding: 10px;
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    top: 10px;
+    right: 10px;
+}
+
+.sobre .close:not(:disabled):not(.disabled):hover {
+    color: #fff;
+    resize: 2;
+    text-decoration: none;
+}
+
+.sobre .close{
+    text-shadow: none;
+}
+
+.sobre .barra-progresso{
+    width: 350px;
+    margin: 20px 0;
+}
+
+.sobre .progress-bar{
+    background-color: #05d3f8;
+}
