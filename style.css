@@ -40,7 +40,7 @@ body{
     position: fixed;
     top: 50%;
     left: 5px;
-    z-index: 9999;
+    z-index: 500;
     transform: translate(0, -50%);
     transition: 0.4s  ease;
 }
@@ -52,11 +52,6 @@ body{
 .navegacao .nav-link.active{
    background-color: #05d3f8;
 }
-
-/* .navegacao .nav-link:hover::before{
-color: white;
-} */
-
 .navegacao a{
     text-transform: uppercase;
     color: white;
@@ -226,7 +221,7 @@ color: white;
 }
 
 .home .redes-sociais{
-    z-index: 9999;
+    z-index: 3;
     display: inline-flex;
     width: 200px;
     justify-content: space-evenly;
