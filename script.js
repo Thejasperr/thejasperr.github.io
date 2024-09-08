@@ -51,7 +51,22 @@ hoverText.addEventListener('mouseover', function() {
   icon.style.color = 'white'; // Muda a cor do ícone ao passar o mouse
 });
 
-// Adiciona o evento de mouseout
-hoverText.addEventListener('mouseout', function() {
-  icon.style.color = 'white'; // Restaura a cor original quando o mouse sai
+
+document.addEventListener('DOMContentLoaded', function () {
+var ExemploModalCentralizado = document.getElementById('ExemploModalCentralizado');
+var blurLayer = document.createElement('div');
+blurLayer.className = 'blur-layer';
+document.body.appendChild(blurLayer);
+
+// Adicionar evento quando o modal for mostrado
+$(ExemploModalCentralizado).on('show.bs.modal', function () {
+  blurLayer.style.display = 'block';
 });
+
+// Adicionar evento quando o modal for escondido
+$(ExemploModalCentralizado).on('hidden.bs.modal', function () {
+  blurLayer.style.display = 'none';
+});
+});
+
+

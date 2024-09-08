@@ -289,22 +289,43 @@ hr{
     border: none;
     flex-direction: column;
     align-items: center;
-    height: 450px;
-    width: auto;
+    height:100%;
     justify-content: flex-start;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .modal-header h5{
     text-align: center;
 }
-.modal-backdrop.show {
-    background-color: #05d3f8;
-}
 
+/* Estilo para a camada de desfoque */
+.blur-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 1040; /* Deve estar abaixo do modal */
+    pointer-events: none; /* Impede que o fundo seja clicável */
+    transition: backdrop-filter 0.3s;
+    display: none; /* Escondido por padrão */
+  }
+  
 
 .sobre .carousel-indicators {
     bottom: 0;
     position: relative;
+}
+
+.sobre .carousel-inner {
+    height: 300px;
+    width: 350px;
 }
 
 .sobre .carousel-indicators li{
@@ -343,4 +364,11 @@ hr{
 
 .sobre .progress-bar{
     background-color: #05d3f8;
+}
+
+.carousel-control-prev {
+    left: -70px;
+}
+.carousel-control-next {
+    right: -70px;
 }
