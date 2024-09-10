@@ -88,18 +88,5 @@ links.forEach(link => {
 });
 
 
-// const imagem = document.getElementById('imagem');
-// const link = document.getElementById('link');
-
-// // Adiciona o efeito de desfoque ao passar o mouse sobre o link
-// link.addEventListener('mouseover', () => {
-//     imagem.classList.add('desfocada');
-// });
-
-// // Remove o efeito de desfoque quando o mouse sai do link
-// link.addEventListener('mouseout', () => {
-//     imagem.classList.remove('desfocada');
-// });
-
 
 
