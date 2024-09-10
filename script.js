@@ -70,3 +70,36 @@ $(ExemploModalCentralizado).on('hidden.bs.modal', function () {
 });
 
 
+// Seleciona todos os links
+const links = document.querySelectorAll('.link');
+
+// Adiciona eventos de mouseover e mouseout para cada link
+links.forEach(link => {
+    const imagemId = link.getAttribute('data-imagem'); // Obtém o ID da imagem associada ao link
+    const imagem = document.getElementById(imagemId);  // Seleciona a imagem correspondente
+
+    link.addEventListener('mouseover', () => {
+        imagem.classList.add('desfocada');
+    });
+
+    link.addEventListener('mouseout', () => {
+        imagem.classList.remove('desfocada');
+    });
+});
+
+
+// const imagem = document.getElementById('imagem');
+// const link = document.getElementById('link');
+
+// // Adiciona o efeito de desfoque ao passar o mouse sobre o link
+// link.addEventListener('mouseover', () => {
+//     imagem.classList.add('desfocada');
+// });
+
+// // Remove o efeito de desfoque quando o mouse sai do link
+// link.addEventListener('mouseout', () => {
+//     imagem.classList.remove('desfocada');
+// });
+
+
+

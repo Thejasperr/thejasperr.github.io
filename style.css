@@ -276,13 +276,13 @@ hr{
     padding-left: 100px;
 }
 
-.sobre img{
+.sobre .imagem img{
     width: 320px;
     border: 20px white solid;
     filter: grayscale(1);
 }
 
-.sobre img:hover{
+.sobre .imagem img:hover{
     resize: 2;
     width: 320px;
     border: 10px white solid;
@@ -384,7 +384,18 @@ hr{
     right: -70px;
 }
 
+.sobre .btn-primary, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle  {
+    color: #fff;
+    background-color: #05d3f8;
+}
 
+.sobre .btn{
+    border: none;
+}
+
+.sobre .btn-primary.focus, .btn-primary:focus , .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
 
 
 
@@ -449,3 +460,148 @@ hr{
     color: #fff;
   }
   
+  .sobre .tecnologias{
+    margin-left: -10px;
+    margin-right: -10px;
+
+  }
+
+  .sobre .tecnologias img{
+    width: auto;
+    height: 60px;
+    margin: 10px;
+    filter: grayscale(1);
+  }
+  .sobre .tecnologias img:hover{
+    height: 80px;
+    filter: grayscale(0);
+    transition: 0.5s ease;
+  }
+
+  .sobre .row .sobre-mim .row{
+    display: flex;
+    height: 36px;
+    justify-content: space-evenly;
+  }
+
+  .download-cv{
+    border: #05d3f8 solid 1px !important;
+    color: white;
+    background: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .portfolio{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+
+  .portfolio .container{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    transition:  all .3s ease-in-out;
+}
+
+.portfolio .cards{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.portfolio .cards img{
+
+    transition:  all .3s ease-in-out;
+    z-index: -50;
+    width: 300px;
+}
+
+
+.portfolio .cards:nth-child(odd){
+    transform: translateY(10px);
+}
+
+.portfolio .cards:nth-child(even){
+    transform: translateY(-10px);
+}
+
+.portfolio .cards::after{
+    content: '';
+    background-color: rgba(0, 0, 0.0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition:  all .3s ease-in-out;
+}
+
+.portfolio .conteudo-cards, .portfolio .conteudo-cards a{
+    text-decoration: none;
+    z-index: 100;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: #05d3f8;
+    transition:  all .3s ease-in-out;
+}
+
+
+.portfolio a .nome:hover{
+    text-wrap: balance;
+    transition:  all .3s ease-in-out;
+    background-color: #05d3f8;
+    padding: 10px;
+    border-radius: 5px;
+    color:white;
+}
+
+.desfocada {
+    filter: grayscale(0);
+    filter: blur(8px); /* Ajuste o nível de desfoque conforme necessário */
+}
+
+.portfolio .container:has(.cards-1:hover){
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+.portfolio .container:has(.cards-2:hover){
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+}
+.portfolio .container:has(.cards-3:hover){
+    grid-template-columns: 1fr 1fr 3fr 1fr;
+}
+.portfolio .container:has(.cards-4:hover){
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+}
+
+.portfolio .cards:hover .conteudo-cards {
+    position: absolute;
+    top: auto;
+    left: 20px;
+    color: white;
+}
+
+.portfolio .cards:hover::after{
+    opacity: 0;
+}
