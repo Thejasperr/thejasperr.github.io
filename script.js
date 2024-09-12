@@ -70,13 +70,11 @@ $(ExemploModalCentralizado).on('hidden.bs.modal', function () {
 });
 
 
-// Seleciona todos os links
 const links = document.querySelectorAll('.link');
 
-// Adiciona eventos de mouseover e mouseout para cada link
 links.forEach(link => {
-    const imagemId = link.getAttribute('data-imagem'); // Obtém o ID da imagem associada ao link
-    const imagem = document.getElementById(imagemId);  // Seleciona a imagem correspondente
+    const imagemId = link.getAttribute('data-imagem'); 
+    const imagem = document.getElementById(imagemId);
 
     link.addEventListener('mouseover', () => {
         imagem.classList.add('desfocada');
@@ -90,3 +88,9 @@ links.forEach(link => {
 
 
 
+var btnExp = document.querySelector('#btn-exp')
+var menuSide = document.querySelector('.navegacao')
+
+btnExp.addEventListener('click', function(){
+    menuSide.classList.toggle('expandir')
+})
