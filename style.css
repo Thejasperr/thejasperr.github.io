@@ -611,7 +611,76 @@ hr{
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
+    .navegacao {
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: space-around;
+        align-items: center;
+    }
+    
+    .naveItems{
+        transition: .5s;
+        opacity: 0;
+        visibility: hidden; /* Menu inicialmente oculto */
+    }
+    
+    /* O botão de expansão será sempre visível */
+    .btn-expandir {
+        display: flex;
+        position: relative;
+        font-size: 30px;
+        color: white;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        visibility: visible; /* Sempre visível */
+        left: -10px; /* Posição inicial */
+        transition: .5s;
+    }
+    
+    /* Quando o menu está expandido */
+    .navegacao.expandir > .naveItems{
+        transition: .5s;
+        opacity: 1;
+        visibility: visible !important; /* Torna o menu visível */
+    }
+    
+    /* Ajuste para a posição do botão quando o menu é expandido */
+    .navegacao.expandir > .btn-expandir {
+        left: 0px; /* Posição ajustada do botão ao expandir */
+    }
+
+    .navegacao.expandir > .btn-expandir i{
+        transform: scaleX(-1); /* Posição ajustada do botão ao expandir */
+    }
+    
+    /* Manter o botão visível e ajustável quando a classe 'expandir' não está presente */
+    .navegacao:not(.expandir) > .btn-expandir{
+        left: -50px; /* Ajuste a posição desejada para o botão quando o menu não está expandido */
+    }
+    
+    .navegacao.expandir .nav-link.active span,
+    .navegacao .nav-link.active span {
+        visibility: hidden !important; /* Oculta o texto do link quando ativo */
+    }
+
+
+    .sobre .sobre-mim{
+        text-align: center;
+        padding: 0 50px 50px 50px;
+    }
+
+    .sobre .row{
+        justify-content: center;
+    }
+
+    .sobre .imagem{
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px){
     .navegacao {
         display: flex;
         flex-direction: row-reverse;
@@ -666,4 +735,39 @@ hr{
     }
     
     
+
+
+
+
+    .text-home h1{
+        font-size: 2.5rem;
+    }
+
+    .text-home p{
+        font-size: 1rem;
+    }
+
+
+    .sobre .sobre-mim{
+        text-align: center;
+        padding: 50px;
+    }
+
+    .sobre .carousel-inner{
+        width: 100%;
+    }
+
+    .sobre .barra-progresso, .sobre .tecnologias, .sobre .rb-container{
+        width: 240px;
+    }
+
+    .sobre .imagem {
+        padding-bottom: 20px;
+    }
+
+    .portfolio .container{
+        height: 100vh;
+        width: 100%;
+        padding: 50px;
+    }
 }
