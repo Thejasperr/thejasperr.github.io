@@ -459,22 +459,22 @@ hr{
     padding-right: 20px;
     color: #fff;
   }
-  
+
   .sobre .tecnologias{
-    margin-left: -10px;
-    margin-right: -10px;
-
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
+  .sobre .tecnologias i{
+    margin: 15px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+.sobre .tecnologias i:hover{
+    font-size: 75px;
+    color: #05d3f8;
 
-  .sobre .tecnologias img{
-    width: auto;
-    height: 60px;
-    margin: 10px;
-    filter: grayscale(1);
-  }
-  .sobre .tecnologias img:hover{
-    height: 80px;
-    filter: grayscale(0);
     transition: 0.5s ease;
   }
 
@@ -500,111 +500,6 @@ hr{
 
 
 
-
-
-
-  .portfolio{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    place-content: center;
-  }
-
-  .portfolio .container{
-    position: relative;
-    width: 600px;
-    height: 300px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    transition:  all .3s ease-in-out;
-}
-
-.portfolio .cards{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.portfolio .cards img{
-
-    transition:  all .3s ease-in-out;
-    z-index: -50;
-    width: 300px;
-}
-
-
-.portfolio .cards:nth-child(odd){
-    transform: translateY(10px);
-}
-
-.portfolio .cards:nth-child(even){
-    transform: translateY(-10px);
-}
-
-.portfolio .cards::after{
-    content: '';
-    background-color: rgba(0, 0, 0.0.6);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition:  all .3s ease-in-out;
-}
-
-.portfolio .conteudo-cards, .portfolio .conteudo-cards a{
-    text-decoration: none;
-    z-index: 100;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    color: #05d3f8;
-    transition:  all .3s ease-in-out;
-}
-
-
-.portfolio a .nome:hover{
-    text-wrap: balance;
-    transition:  all .3s ease-in-out;
-    background-color: #05d3f8;
-    padding: 10px;
-    border-radius: 5px;
-    color:white;
-}
-
-.desfocada {
-    filter: grayscale(0);
-    filter: blur(8px); /* Ajuste o nível de desfoque conforme necessário */
-}
-
-.portfolio .container:has(.cards-1:hover){
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-}
-.portfolio .container:has(.cards-2:hover){
-    grid-template-columns: 1fr 3fr 1fr 1fr;
-}
-.portfolio .container:has(.cards-3:hover){
-    grid-template-columns: 1fr 1fr 3fr 1fr;
-}
-.portfolio .container:has(.cards-4:hover){
-    grid-template-columns: 1fr 1fr 1fr 3fr;
-}
-
-.portfolio .cards:hover .conteudo-cards {
-    position: absolute;
-    top: auto;
-    left: 20px;
-    color: white;
-}
-
-.portfolio .cards:hover::after{
-    opacity: 0;
-}
 
 .btn-expandir{
     visibility: hidden;
@@ -668,7 +563,7 @@ hr{
 
     .sobre .sobre-mim{
         text-align: center;
-        padding: 0 50px 50px 50px;
+        padding: 50px;
     }
 
     .sobre .row{
@@ -770,4 +665,71 @@ hr{
         width: 100%;
         padding: 50px;
     }
+}
+
+
+
+
+
+
+
+
+
+
+.portfolio .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.portfolio .container .row{
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.portfolio .card{
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.portfolio .card img{
+    width: 100%;
+    border-radius: .25rem;
+}
+
+.portfolio .card .textos{
+    color: black;
+    text-align: center;
+}
+
+.portfolio .card .textos .habilidades-usadas{
+    display: flex;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.portfolio .card .textos i:hover{
+    transition: .2s;
+    transform: scale(1.5);
+    color: #05d3f8;
+}
+
+.portfolio .card a{
+    background-color: #05d3f8;
+    text-align: center;
+    border-radius: .25rem;
+    padding: 5px 0;
+    color: white;
+}
+
+.portfolio .card a:hover{
+    text-decoration: none;
 }
