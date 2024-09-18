@@ -472,7 +472,8 @@ hr{
     cursor: pointer;
 }
 .sobre .tecnologias i:hover{
-    font-size: 75px;
+    /* font-size: 75px; */
+    transform: scale(1.3);
     color: #05d3f8;
 
     transition: 0.5s ease;
@@ -602,6 +603,10 @@ hr{
         left: -10px; /* Posição inicial */
         transition: .5s;
     }
+
+    .btn-expandir:hover{
+        color: #05d3f8;
+    }
     
     /* Quando o menu está expandido */
     .navegacao.expandir > .naveItems{
@@ -665,6 +670,14 @@ hr{
         width: 100%;
         padding: 50px;
     }
+
+    .portfolio .card{
+        width: 200px;
+        padding: 10px;
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 
@@ -692,10 +705,18 @@ hr{
 .portfolio .card{
     width: 200px;
     padding: 10px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     margin-right: auto;
     margin-left: auto;
 }
+
+/* .portfolio .card:nth-child(-n+3){
+    margin: 0 auto;
+}
+
+.portfolio .card:nth-last-child(-n+3){
+    margin: 0 auto;
+} */
 
 .portfolio .card img{
     width: 100%;
@@ -733,3 +754,169 @@ hr{
 .portfolio .card a:hover{
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contato .container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.contato .container .row{
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.contato .container .texto{
+    text-align: center;
+}
+
+.contato .container .contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contato .container .contato form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contato .container .contato form label{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contato .container .contato form input{
+    padding: 10px;
+    outline: none;
+    border: 0;
+    margin-bottom: 30px;
+    transition: all .5s;
+}
+
+.contato .container .contato form input:focus{
+    border-radius: 1rem;
+}
+
+.contato .container .contato form textarea{
+    padding: 10px;
+    outline: none;
+    border: 0;
+    margin-bottom: 20px;
+    transition: all .5s;
+}
+
+.contato .container .contato form textarea:focus{
+    border-radius: 1rem;
+}
+
+.contato .container .contato form button{
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #05d3f8;
+    color: white;
+    transition: all 1s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.contato .container .contato form button:hover{
+    background: #05d3f8;
+    color: white;
+    border-radius: 1rem;
+}
+
+.contato .redes-sociais{
+    z-index: 3;
+    display: inline-flex;
+    width: 200px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.contato .redes-sociais a{
+    color: aliceblue;
+}
+
+.contato .redes-sociais a:hover{
+    color: #05d3f8;
+    text-decoration: none;
+    transition: .5s linear !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.obrigado{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+
+.obrigado .conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.obrigado .conteudo h1{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.obrigado .conteudo a{
+    text-decoration: none;
+    padding: 15px;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #05d3f8;
+    color: white;
+    transition: all 1s;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.obrigado .conteudo a:hover{
+    background: #05d3f8;
+    color: white;
+    border-radius: 1rem;
+}
+
