@@ -1,3 +1,3 @@
-<img src="IMGsite.png" alt="Perfil">
+<img src="img/IMGsite.png" alt="Perfil">
 
 https://thejasperr.netlify.app
