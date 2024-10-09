@@ -210,6 +210,7 @@ body{
     99% { transform:translateX(-3%); }
     100% { transform:translateX(0); }
 }
+
 .seta a{
     color: aliceblue;
 }
